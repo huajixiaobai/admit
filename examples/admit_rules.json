@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "note": "示例规则：只接受来自 dsh 或 user、且体积正常的消息",
+  "rules": [
+    {
+      "name": "来源可信",
+      "type": "sender_prefix",
+      "value": "dsh",
+      "hint": "只接受 dsh 发起的任务"
+    },
+    {
+      "name": "体积可控",
+      "type": "max_size",
+      "value": 65536,
+      "hint": "单条消息不超过 64KB，防止误投大文件"
+    }
+  ]
+}
